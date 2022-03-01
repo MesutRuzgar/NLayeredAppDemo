@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace NorthwindDataAccess.Concrete.EntityFramework
 {
-    class NorthwindContext:DbContext
+    public class NorthwindContext:DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 }

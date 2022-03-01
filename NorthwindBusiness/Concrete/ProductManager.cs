@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using NorthwindBusiness.Abstract;
+using NorthwindBusiness.Utilities;
 using NorthwindBusiness.ValidationRules.FluentValidation;
 using NorthwindDataAccess.Abstract;
 using NorthwindDataAccess.Concrete;
@@ -20,17 +21,13 @@ namespace NorthwindBusiness.Concrete
 
         public ProductManager(IProductDal productDal)
         {
+           
             _productDal = productDal;
         }
 
         public void Add(Product product)
         {
-            ProductValidator productValidator = new ProductValidator();
-            var result =productValidator.Validate(product);
-            if (result.Errors.Count>0)
-            {
-                throw new ValidationException(result.Errors);
-            }
+            ValidationTool.Validate(new ProductValidator(), product);
             _productDal.Add(product);
         }
 
@@ -64,6 +61,7 @@ namespace NorthwindBusiness.Concrete
 
         public void Update(Product product)
         {
+            ValidationTool.Validate(new ProductValidator(), product);
             _productDal.Update(product);
         }
     }

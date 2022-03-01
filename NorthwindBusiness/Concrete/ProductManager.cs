@@ -1,4 +1,5 @@
-﻿using NorthwindDataAccess.Abstract;
+﻿using NorthwindBusiness.Abstract;
+using NorthwindDataAccess.Abstract;
 using NorthwindDataAccess.Concrete;
 using NorthwindDataAccess.Concrete.EntityFramework;
 using NorthwindEntities.Concrete;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace NorthwindBusiness.Concrete
 {
-   public class ProductManager
+   public class ProductManager:IProductService
     {
         IProductDal _productDal;
 

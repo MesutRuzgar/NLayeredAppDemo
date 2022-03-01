@@ -1,4 +1,5 @@
-﻿using NorthwindEntities.Concrete;
+﻿using NorthwindBusiness.Concrete;
+using NorthwindEntities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace NorthwindBusiness.Abstract
         List<Product> GetAll();
         List<Product> GetProductsByCategory(int categoryId);
         List<Product> GetProductsByProductName(string productName);
+        void Add(Product product);
     }
 }

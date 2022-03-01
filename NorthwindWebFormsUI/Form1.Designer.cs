@@ -60,6 +60,7 @@ namespace NorthwindWebFormsUI
             this.tbxUpdateProductName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnRemove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).BeginInit();
             this.gbxCategory.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -70,9 +71,9 @@ namespace NorthwindWebFormsUI
             // dgwProduct
             // 
             this.dgwProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProduct.Location = new System.Drawing.Point(12, 170);
+            this.dgwProduct.Location = new System.Drawing.Point(12, 198);
             this.dgwProduct.Name = "dgwProduct";
-            this.dgwProduct.Size = new System.Drawing.Size(542, 158);
+            this.dgwProduct.Size = new System.Drawing.Size(542, 130);
             this.dgwProduct.TabIndex = 0;
             this.dgwProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwProduct_CellClick);
             // 
@@ -355,11 +356,22 @@ namespace NorthwindWebFormsUI
             this.label5.TabIndex = 6;
             this.label5.Text = "Ürün Adı :";
             // 
+            // btnRemove
+            // 
+            this.btnRemove.Location = new System.Drawing.Point(395, 169);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(150, 23);
+            this.btnRemove.TabIndex = 15;
+            this.btnRemove.Text = "Sil";
+            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 530);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.gbxCategory);
             this.Controls.Add(this.gbxProductAdd);
@@ -414,6 +426,7 @@ namespace NorthwindWebFormsUI
         private System.Windows.Forms.TextBox tbxUpdateProductName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnRemove;
     }
 }
 

@@ -116,5 +116,28 @@ namespace NorthwindWebFormsUI
             tbxQuantityPerUnitUpdate.Text = row.Cells[4].Value.ToString();
             tbxUnitsInStockUpdate.Text = row.Cells[5].Value.ToString();
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+
+            if (dgwProduct.CurrentRow !=null)
+            {
+                try
+                {
+                    _productService.Delete(new Product { ProductId = Convert.ToInt32(dgwProduct.CurrentRow.Cells[0].Value) });
+                    LoadProducts();
+                    MessageBox.Show("Ürün Silindi!");
+                }
+                catch (Exception exception)
+                {
+
+                    MessageBox.Show(exception.Message);
+                }
+               
+            }
+                       
+           
+        }
+  
     }
 }

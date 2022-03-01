@@ -67,6 +67,7 @@ namespace NorthwindWebFormsUI
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Size = new System.Drawing.Size(156, 21);
             this.cbxCategory.TabIndex = 2;
+            this.cbxCategory.SelectedIndexChanged += new System.EventHandler(this.cbxCategory_SelectedIndexChanged);
             // 
             // lblCategory
             // 

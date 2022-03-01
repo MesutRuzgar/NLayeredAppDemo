@@ -1,4 +1,6 @@
-﻿using NorthwindDataAccess.Concrete;
+﻿using NorthwindDataAccess.Abstract;
+using NorthwindDataAccess.Concrete;
+using NorthwindDataAccess.Concrete.EntityFramework;
 using NorthwindEntities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,11 +12,16 @@ namespace NorthwindBusiness.Concrete
 {
    public class ProductManager
     {
-        ProductDal _productDal = new ProductDal();
+        IProductDal _productDal;
+
+        public ProductManager(IProductDal productDal)
+        {
+            _productDal = productDal;
+        }
+
         public List<Product> GetAll()
         {
-           
-            return _productDal.GetAll();
+           return _productDal.GetAll();
         }
     }
 }

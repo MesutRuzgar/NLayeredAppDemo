@@ -35,7 +35,7 @@ namespace NorthwindWebFormsUI
             this.lblCategory = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.tbxProductName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).BeginInit();
             this.gbxCategory.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -81,7 +81,7 @@ namespace NorthwindWebFormsUI
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lblSearch);
-            this.groupBox2.Controls.Add(this.tbxSearch);
+            this.groupBox2.Controls.Add(this.tbxProductName);
             this.groupBox2.Location = new System.Drawing.Point(12, 91);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(542, 73);
@@ -98,12 +98,13 @@ namespace NorthwindWebFormsUI
             this.lblSearch.TabIndex = 4;
             this.lblSearch.Text = "Ara :";
             // 
-            // tbxSearch
+            // tbxProductName
             // 
-            this.tbxSearch.Location = new System.Drawing.Point(94, 29);
-            this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(156, 20);
-            this.tbxSearch.TabIndex = 5;
+            this.tbxProductName.Location = new System.Drawing.Point(94, 29);
+            this.tbxProductName.Name = "tbxProductName";
+            this.tbxProductName.Size = new System.Drawing.Size(156, 20);
+            this.tbxProductName.TabIndex = 5;
+            this.tbxProductName.TextChanged += new System.EventHandler(this.tbxProductName_TextChanged);
             // 
             // Form1
             // 
@@ -133,7 +134,7 @@ namespace NorthwindWebFormsUI
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.TextBox tbxProductName;
     }
 }
 

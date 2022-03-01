@@ -1,5 +1,6 @@
 ﻿using NorthwindBusiness.Abstract;
 using NorthwindBusiness.Concrete;
+using NorthwindBusiness.DependencyResolvers.Ninject;
 using NorthwindDataAccess.Concrete.EntityFramework;
 using NorthwindEntities.Concrete;
 using System;
@@ -19,8 +20,8 @@ namespace NorthwindWebFormsUI
         public Form1()
         {
             InitializeComponent();
-            _productService = new ProductManager(new EfProductDal());
-            _categoryService = new CategoryManager(new EfCategoryDal());
+            _productService = InstanceFactory.GetInstance<IProductService>();
+            _categoryService = InstanceFactory.GetInstance<ICategoryService>();
         }
 
         IProductService _productService;
